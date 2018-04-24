@@ -4,6 +4,8 @@ import java.awt.*;
 
 public interface IMobile {
 
+
+
     public Direction getDirection();
 
     public void setDirection();
@@ -18,7 +20,7 @@ public interface IMobile {
 
     public int getSpeed();
 
-    public Image getImage();
+    public Image getImage(int image);
 
     public void move();
 

@@ -1,6 +1,8 @@
 package model;
 
-public class Missile {
+import java.lang.management.MonitorInfo;
+
+public class Missile extends Mobile {
     private static int SPEED = 4;
     private static int WIDTH = 30;
     private static int HEIGHT = 10;
@@ -8,12 +10,19 @@ public class Missile {
     private static String image = "missile";
     private int distance_traveled = 0;
 
-    public Missile(Direction direction, Dimension dimension) {
-
+    public Missile(int speed, Direction direction, Position position, Dimension dimension, String image, int distance_traveled) {
+        super(speed, direction, position, dimension, image);
+        this.distance_traveled = distance_traveled;
     }
 
     public int getWidthWithADirection(Direction direction){}
     public int getHeightWithADirection(Direction direction){}
+
+    @Override
     public void move(){}
-    public boolean isWeapon(){}
+
+    @Override
+    public boolean isWeapon(){
+        return true;
+    }
 }

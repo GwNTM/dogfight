@@ -1,13 +1,17 @@
 package model;
 
-import java.awt.*;
+import javafx.geometry.Pos;
 
-public class Mobile {
+import java.awt.*;
+import java.util.ArrayList;
+
+public class Mobile implements IMobile{
     private int speed;
     private Direction direction;
     private Position position;
     private Dimension dimension;
-    private DogfightModel dogfightModel;
+    private Image images[] = new Image[4];
+    private DogflightModel dogflightModel;
 
     public Mobile(int speed, Direction direction, Position position, Dimension dimension, String image) {
         this.speed = speed;
@@ -18,6 +22,11 @@ public class Mobile {
 
     public Direction getDirection() {
         return direction;
+    }
+
+    @Override
+    public void setDirection() {
+
     }
 
     public void setDirection(Direction direction) {
@@ -36,6 +45,16 @@ public class Mobile {
         return dimension;
     }
 
+    @Override
+    public int getWidth() {
+        return 0;
+    }
+
+    @Override
+    public int getHeight() {
+        return 0;
+    }
+
     public int getWidth(Dimension dimension) {
         return dimension.width;
     }
@@ -51,32 +70,45 @@ public class Mobile {
     }
 
     public boolean isPlayer(int player) {
-        return true;
+        return false;
+    }
+
+    @Override
+    public void setDogflightModel(IDogfightModel dogflightModel) {
+
     }
 
     public void moveUp() {
+        this.position.setY(this.position.getY()-1);
     }
 
     public void moveRight() {
+        this.position.setX(this.position.getX()+1);
     }
 
     public void moveDown() {
+        this.position.setY(this.position.getY()+1);
     }
 
-    public void movLeft() {
+    public void moveLeft() {
+        this.position.setX(this.position.getX()-1);
     }
 
     public Color getColor(){}
 
-    public DogfightModel getDogFightModel(){
-        return dogfightModel;
+    public DogflightModel getDogflightModel(){
+        return this.dogflightModel;
     }
 
     public void setDogFightModel(IDogfightModel dogFightModel){}
 
     public boolean hit(){}
 
-    public boolean isWeapon(){}
+    public boolean isWeapon(){
+        return false;
+    }
 
-    public Image getImage(){}
+    public Image getImage(int image){
+        return this.images[image];
+    }
 }
