@@ -1,5 +1,7 @@
 package gameframe;
 
+import java.awt.Graphics;
+
 import java.util.Observable;
 import java.util.Observer;
 
@@ -14,7 +16,7 @@ public class GamePanel extends JPanel implements Observer  {
 		
 	}
 	
-	public update(Observable observable) {
+	public void update(Observable observable) {
 		
 	}
 	
