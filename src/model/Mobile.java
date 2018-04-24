@@ -1,10 +1,13 @@
 package model;
 
+import java.awt.*;
+
 public class Mobile {
     private int speed;
     private Direction direction;
     private Position position;
     private Dimension dimension;
+    private DogfightModel dogfightModel;
 
     public Mobile(int speed, Direction direction, Position position, Dimension dimension, String image) {
         this.speed = speed;
@@ -65,7 +68,9 @@ public class Mobile {
 
     public Color getColor(){}
 
-    public IDogfightModel getDogFightModel(){}
+    public DogfightModel getDogFightModel(){
+        return dogfightModel;
+    }
 
     public void setDogFightModel(IDogfightModel dogFightModel){}
 

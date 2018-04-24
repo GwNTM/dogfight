@@ -12,8 +12,8 @@ public class Missile {
 
     }
 
-    public int getWidthWithADirection(Direction direction){return 0;}
-    public int getHeightWithADirection(Direction direction){return 0;}
+    public int getWidthWithADirection(Direction direction){}
+    public int getHeightWithADirection(Direction direction){}
     public void move(){}
-    public boolean isWeapon(){return true;}
+    public boolean isWeapon(){}
 }

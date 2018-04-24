@@ -1,6 +1,9 @@
 package model;
 
+import java.awt.*;
+
 public interface IMobile {
+
     public Direction getDirection();
 
     public void setDirection();
@@ -23,7 +26,7 @@ public interface IMobile {
 
     public boolean isPlayer(int player);
 
-    public void setDogflightModel (IDogfightModel dogFlightModel);
+    public void setDogflightModel (IDogfightModel dogflightModel);
 
     public boolean hit();
 
