@@ -1,4 +1,4 @@
 package model;
 
-public class IMobile {
+public interface IMobile {
 }

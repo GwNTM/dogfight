@@ -1,4 +1,4 @@
 package model;
 
-public class IArea {
+public interface IArea {
 }
